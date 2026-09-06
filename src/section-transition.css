@@ -1,0 +1,8 @@
+/* The handoff lives inside the hero because its overflow clips section overlap. */
+.scene-hero:after{content:"";position:absolute;z-index:1;right:0;bottom:0;left:0;height:clamp(240px,34vh,430px);background:linear-gradient(180deg,rgba(246,245,239,0) 0%,rgba(246,245,239,.24) 34%,rgba(246,245,239,.72) 70%,#f6f5ef 100%);pointer-events:none}
+.scene-hero .hero-content{z-index:2}
+.scene-hero .hero-foot{z-index:3}
+.about-rebuild{position:relative;margin-top:0;padding-top:84px;background:#f6f5ef}
+.about-rebuild:before{display:none}
+.about-rebuild>.about-art,.about-rebuild>.about-details{position:relative;z-index:1}
+@media(max-width:900px){.scene-hero:after{height:30vh;min-height:210px}.about-rebuild{margin-top:0;padding-top:70px;background:#f6f5ef}}
